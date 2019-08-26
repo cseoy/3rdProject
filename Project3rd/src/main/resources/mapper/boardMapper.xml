@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring.dao.BoardDAO">
+  
+  <!--  sql문 중간에 부등호(>)가 들어가게 되면 태그로 인식할 가능성이 있다.
+  		
+  		그러므로 xml CDATA로 처리 -->
+  		
+  	<select id="selectAll" resultType="BoardVO">
+  	
+  	<![CDATA[
+  	
+  		select * from user_board
+  		where articleno > 0
+  		order by articleno desc, date desc
+  	]]>
+  	</select>
+  	
+  	<select id="listPage" resultType="BoardVO">
+  	 <![CDATA[
+  	 	 select * from user_board
+ 		 where articleno > 0
+  		 order by articleno desc ,date desc
+  		 limit #{page}, 10 
+  	 ]]>
+  	</select>
+  	<select id="listCriteria" resultType="BoardVO">
+  	 <![CDATA[
+  	 	 select * from user_board
+ 		 where articleno > 0
+  		 order by articleno desc ,date desc
+  		 limit #{startPage}, #{numPerPage}
+  	 ]]>
+  	</select>
+  	<select id="countData" resultType="int">
+  	 <![CDATA[
+  	 	 select count(articleno)
+  	 	 from user_board
+ 		 where articleno > 0
+  	 ]]>
+  	</select>
+  	
+  	<select id="listFind" resultType="BoardVO">
+  	 	 <![CDATA[
+  	 	 select * from user_board
+ 		 where articleno > 0
+ 		]]>
+ 		<include refid="findSQL"/>
+ 		 <![CDATA[
+  		 order by articleno desc ,date desc
+  		 limit #{startPage}, #{numPerPage}
+  	 	]]>
+  	</select>
+  	
+  	<select id="findCountData" resultType="int">
+  	 	 <![CDATA[
+  	 	 select count(articleno)
+  	 	 from user_board
+ 		 where articleno > 0
+  	 	]]>
+ 		<include refid="findSQL"/>
+  	</select>
+  	<!-- mybatis 표현식 -->
+   <sql id="findSQL">
+      <if test="findType != null">
+         <if test="findType == 'S'.toString()">
+         and title like CONCAT('%',#{keyword}, '%')
+         </if>
+         <if test="findType == 'C'.toString()">
+         and contents like CONCAT('%',#{keyword}, '%')
+         </if>
+         <if test="findType == 'W'.toString()">
+         and writer like CONCAT('%',#{keyword}, '%')
+         </if>
+         <if test="findType == 'SC'.toString()">
+         and (subject like CONCAT('%',#{keyword}, '%')
+         or contents like CONCAT('%',#{keyword}, '%'))
+         </if>
+         <if test="findType == 'CW'.toString()">
+         and (contents like CONCAT('%',#{keyword}, '%')
+         or writer like CONCAT('%',#{keyword}, '%'))
+         </if>
+         <if test="findType == 'SCW'.toString()">
+         and (title like CONCAT('%',#{keyword}, '%')
+         or contents like CONCAT('%',#{keyword}, '%')
+         or writer like CONCAT('%',#{keyword}, '%'))
+         </if>
+      </if>
+   </sql>
+  	 
+  	<select id="selectOne"  resultType="BoardVO">
+  		select * from user_board where articleNo = #{articleNo}
+  	</select>
+  	<insert id="insertOne">
+  	<![CDATA[
+  	 	
+  	 	
+  	 	insert into user_board(articletype,title,contents,writer)
+  		values(#{articleType},#{title},#{contents},#{writer})
+  	 	
+  	 	
+  	 	
+ 		]]>
+  		
+  	</insert>
+  	<update id="updateOne" >
+  		update user_board set title = #{title} , contents = #{contents}
+  		where articleNo = #{articleNo}
+  	</update>
+  	<delete id="deleteOne" >
+  		delete from user_board
+  		where articleNo = #{articleNo}
+  	</delete>
+  
+  </mapper>

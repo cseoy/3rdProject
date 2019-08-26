@@ -17,13 +17,13 @@
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation" value="classpath:/mybatis-config.xml" />
-		<property name="mapperLocations" value="classpath:mapper/*.xml" />
+		<!-- <property name="configLocation" value="classpath:/mybatis-config.xml" />
+		<property name="mapperLocations" value="classpath:mapper/*.xml" /> -->
 	</bean>
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory"></constructor-arg>
 	</bean>
 	
-	<context:component-scan base-package="com.team3.dao"></context:component-scan>
-	<context:component-scan base-package="com.team3.service"></context:component-scan>
+	<!-- <context:component-scan base-package="com.team3.dao"></context:component-sca n>
+	<context:component-scan base-package="com.team3.service"></context:component-scan> -->
 </beans>
