@@ -21,8 +21,8 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import com.team3.vo.AnimalVO;
-import com.team3.vo.PageCriteria;
-import com.team3.vo.PagingMaker;
+import com.team3.vo.AnimalPageCriteria;
+import com.team3.vo.AnimalPagingMaker;
 
 
 @Controller
@@ -61,8 +61,8 @@ public class AnimalController {
 		
 		logger.info("animal list start");
 		
-		PagingMaker pagingMaker = new PagingMaker();
-		PageCriteria pcri = new PageCriteria();
+		AnimalPagingMaker pagingMaker = new AnimalPagingMaker();
+		AnimalPageCriteria pcri = new AnimalPageCriteria();
 		
 		System.out.println("pageNo : "+req.getParameter("pageNo"));
 		

@@ -3,7 +3,7 @@ package com.team3.vo;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
-public class PagingMaker {
+public class AnimalPagingMaker {
 	private int totalCount; // 전체 데이터 개수
 	private int startPage; // 페이지 목록에서 시작번호
 	private int endPage; // 페이지 목록에서 끝번호
@@ -11,7 +11,7 @@ public class PagingMaker {
 	private boolean next; // 다음 버튼
 	
 	private int displayPageNum = 10; // 페이지 목록에 나타낼 페이지 번호의 수
-	private PageCriteria pcri;
+	private AnimalPageCriteria pcri;
 	
 	private void getPagingData() {
 		// endPage : Math.ceil((현재 페이지 번호/페이지 목록에 나타낼 페이지 번호 수)*페이지 목록에 나타낼 페이지 번호 수)
@@ -110,12 +110,12 @@ public class PagingMaker {
 		this.displayPageNum = displayPageNum;
 	}
 
-	public PageCriteria getPcri() {
+	public AnimalPageCriteria getPcri() {
 		System.out.println(pcri.toString());
 		return pcri;
 	}
 
-	public void setPcri(PageCriteria pcri) {
+	public void setPcri(AnimalPageCriteria pcri) {
 		this.pcri = pcri;
 	}	
 }

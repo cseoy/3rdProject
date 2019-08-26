@@ -1,10 +1,10 @@
 package com.team3.vo;
 
-public class PageCriteria {
+public class AnimalPageCriteria {
 	private int pageNo; // 현재 페이지 
 	private int numOfRows; // 페이지 당 글의 개수
 	
-	public PageCriteria() {
+	public AnimalPageCriteria() {
 		this.pageNo = 1;
 		this.numOfRows = 12;
 	}
