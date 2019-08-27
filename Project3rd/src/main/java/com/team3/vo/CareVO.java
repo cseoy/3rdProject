@@ -6,7 +6,7 @@ public class CareVO {
 	private String weekdayopercolsehhmm;
 	private String weekdayoperopenhhmm;
 	private String phonenumber;
-	
+	 
 	
 	public CareVO() {
 		super();
