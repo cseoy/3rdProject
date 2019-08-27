@@ -20,9 +20,9 @@ import com.team3.vo.PagingMaker;
 
 @Controller
 @RequestMapping("/board/*")
-public class BoardController {
+public class boardController {
 	private static final Logger logger =
-			LoggerFactory.getLogger(BoardController.class);
+			LoggerFactory.getLogger(boardController.class);
 	
 	@Inject
 	private BoardService bsvc;
