@@ -29,11 +29,11 @@
       <!--main content start-->
 <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i> Board LIST PAGE</h3>
+          	<h3><i class="fa fa-angle-right"></i> 제보 게시판</h3>
 		  		<div class="row mt">
 			  		<div class="col-lg-12">
                       <div class="content-panel">
-                      <h4><i class="fa fa-angle-right"></i> Board LIST </h4>
+                      <h4><i class="fa fa-angle-right"></i> 게시물 목록 </h4>
                           <section id="unseen">
                           
                           <!-- find -->
@@ -42,7 +42,7 @@
 								<select name="findType" class="form-control" style="width: 30%; float: left;">
 									<option value="N">
 										<c:out value="${fCri.findType == null ? 'selected' : '' }" />
-									--------</option>
+									검색 유형</option>
 									<option value="S">
 										<c:out value="${fCri.findType == 'S' ? 'selected' : '' }" />
 									제목</option>

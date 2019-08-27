@@ -41,16 +41,16 @@
       *********************************************************************************************************************************************************** -->
       <!--header start-->
       <header class="header black-bg">
-              <div class="sidebar-toggle-box">
+              <!-- <div class="sidebar-toggle-box">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-              </div>
+              </div> -->
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Spring Project</b></a>
+            <a href="index.html" class="logo"><b>유기견을 찾습니다</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
-                <ul class="nav top-menu">
-                    <!-- settings start -->
+                <!-- <ul class="nav top-menu">
+                    settings start
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-tasks"></i>
@@ -118,8 +118,8 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- settings end -->
-                    <!-- inbox dropdown start-->
+                    settings end
+                    inbox dropdown start
                     <li id="header_inbox_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
                             <i class="fa fa-envelope-o"></i>
@@ -183,13 +183,13 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- inbox dropdown end -->
-                </ul>
+                    inbox dropdown end
+                </ul> -->
                 <!--  notification end -->
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="../">메인화면으로</a></li>
             	</ul>
             </div>
         </header>
