@@ -20,7 +20,7 @@ import com.team3.vo.PagingMaker;
 
 @Controller
 @RequestMapping("/fboard/*")
-public class FindController {
+public class indController {
 
 	private static final Logger logger = LoggerFactory.getLogger(FindController.class);
 
