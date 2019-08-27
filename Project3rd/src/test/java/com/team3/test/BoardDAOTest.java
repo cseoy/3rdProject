@@ -14,6 +14,7 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.team3.dao.BoardDAO;
+import com.team3.vo.BoardVO;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -25,13 +26,17 @@ public class BoardDAOTest {
 	
 	private static Logger logger = LoggerFactory.getLogger(BoardDAOTest.class); // 로그기록하기 위함
 	
-	/*
-	 * @Test //org.junit public void insertTest() throws Exception{ BoardVO bvo =
-	 * new BoardVO(); bvo.setArticleType("1"); bvo.setTitle("조반석");
-	 * bvo.setContents("trash"); bvo.setWriter("오철민");
-	 * 
-	 * bdao.insert(bvo); } // insert end
-	 */
+	
+	  @Test
+	  public void insertTest() throws Exception{
+		  BoardVO bvo = new BoardVO(); 
+		  bvo.setArticleType("발견"); 
+		  bvo.setTitle("보신각 앞쪽에서 강아지 발견");
+		  bvo.setContents("상동"); 
+		  bvo.setWriter("오철민");
+	  
+	  bdao.insert(bvo); } // insert end
+	 
 
 //	@Test
 //	public void selectOneTest() throws Exception {
