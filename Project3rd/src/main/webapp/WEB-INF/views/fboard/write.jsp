@@ -6,7 +6,7 @@
  <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i>WRITE PAGE</h3>
+          	<h3><i class="fa fa-angle-right"></i>글쓰기</h3>
           	
           	<!-- BASIC FORM ELELEMNTS -->
           	<div class="row mt">
@@ -43,7 +43,7 @@
                            <div class="form-group">
                               <div class="col-sm-12" align="center">
 									<button type="submit" class="btn btn-theme">등록하기</button>
-									<button type="reset" class="btn btn-theme" >RESET</button>
+									<button type="reset" class="btn btn-theme" >리셋</button>
                               </div>
                           </div>
                

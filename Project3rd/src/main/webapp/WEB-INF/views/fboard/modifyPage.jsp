@@ -20,7 +20,7 @@
  <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i>MODIFY PAGE</h3>
+          	<h3><i class="fa fa-angle-right"></i>게시글 수정</h3>
 
           	
           	<!-- BASIC FORM ELELEMNTS -->
@@ -67,8 +67,8 @@
                           </div>
                            <div class="form-group">
                               <div class="col-sm-12" align="center">
-									<button type="submit" id="btn_save" class="btn btn-theme">CONFIRM</button>
-									<button type="reset" id="btn_cancel" class="btn btn-theme03" >CANCEL</button>
+									<button type="submit" id="btn_save" class="btn btn-theme">확인</button>
+									<button type="reset" id="btn_cancel" class="btn btn-theme03" >취소</button>
                               </div>
                           </div>
                
