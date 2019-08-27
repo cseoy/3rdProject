@@ -29,7 +29,7 @@
  <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i>READ PAGE</h3>
+          	<h3><i class="fa fa-angle-right"></i>게시글</h3>
 
           	<form method="get" role="form">
           		<input type="hidden" name="articleNo" value="${boardVO.articleNo }" />
@@ -79,9 +79,9 @@
                           </div>
                            <div class="form-group">
                               <div class="col-sm-12" align="center">
-									<button type="button" id="btn_modify" class="btn btn-theme">MODIFY</button>
-									<button type="button" id="btn_delete" class="btn btn-theme02">DELETE</button>
-									<button type="button" id="btn_list" class="btn btn-theme03" >GO LIST</button>
+									<button type="button" id="btn_modify" class="btn btn-theme">수정</button>
+									<button type="button" id="btn_delete" class="btn btn-theme02">삭제</button>
+									<button type="button" id="btn_list" class="btn btn-theme03" >목록으로</button>
                               </div>
                           </div>
                
