@@ -54,7 +54,7 @@
 		<nav id="colorlib-main-menu" role="navigation">
 			<ul>
 				<li class="colorlib-active"><a href="/animal/list">Home</a></li>
-				<li><a href="../carecenter">Care Center</a></li>
+				<li><a href="/animal/center">Care Center</a></li>
 				<li><a href="../about">About</a></li>
 				<li><a href="/board/list">Board</a></li>
 				<li><a href="../contact">Contact</a></li>
